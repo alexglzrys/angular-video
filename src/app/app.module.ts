@@ -5,6 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
+import { routing } from './app-routing';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { VideoListComponent } from './components/video-list/video-list.component
   imports: [
     BrowserModule,
     HttpClientModule, // Necesario para hacer uso del servicio HTTP
+    routing,  // Importar rutas principales
   ],
   providers: [],
   bootstrap: [AppComponent]

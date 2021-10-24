@@ -1,8 +1,21 @@
 <div class="container">
+  <!-- Esperar hasta que la información este disponible para proyectarla en la vista -->
   <ng-container *ngIf="video">
     <h3>Mostrando video: {{ video.title }}</h3>
-    <video controls autoplay>
+    <!-- Asignar una variable local para hacer referencia a este elemento dentro del controlador
+    Escuchar los eventos para obtener metainformación e información en tiempo real del estado de reproducción -->
+    <video controls autoplay #videoPlayer (loadedmetadata)="onMetadata($event, videoPlayer)" (timeupdate)="onTimeUpdate($event, videoPlayer)">
       <source [src]="getUrlVideo(video.video_url)" type="video/mp4">
     </video>
+    <div class="progress" [style]="{'width': progreso + '%'}"></div>
+    <div class="controls">
+      <button (click)="play()"><i class="far fa-play-circle"></i></button>
+      <button (click)="pause()"><i class="far fa-pause-circle"></i></button>
+      <button (click)="stop()"><i class="far fa-stop-circle"></i></button>
+    </div>
+    <div class="information">
+      <p>{{ video.description }}</p>
+      <p>Duración: {{ duration }} - {{ current }}</p>
+    </div>
   </ng-container>
 </div>

@@ -1,3 +1,8 @@
 <div class="container">
-  <h3>Mostrando video: {{ id }}</h3>
+  <ng-container *ngIf="video">
+    <h3>Mostrando video: {{ video.title }}</h3>
+    <video controls autoplay>
+      <source [src]="getUrlVideo(video.video_url)" type="video/mp4">
+    </video>
+  </ng-container>
 </div>

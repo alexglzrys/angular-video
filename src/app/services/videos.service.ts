@@ -22,4 +22,9 @@ export class VideosService {
     return this.http.get<Array<IVideo>>(URL);
   }
 
+  getVideo(id: number): Observable<Array<IVideo>> {
+    const URL = 'http://localhost:8888/Backend/services-angular-videos/api/video.php?id=' + id;
+    return this.http.get<Array<IVideo>>(URL);
+  }
+
 }

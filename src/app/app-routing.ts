@@ -5,7 +5,7 @@ import { VideoPlayerComponent } from "./components/video-player/video-player.com
 // Definir las rutas principales de la aplicación
 const routes = [
     {path: 'videos', component: VideoListComponent},
-    {path: 'player', component: VideoPlayerComponent},
+    {path: 'player/:id', component: VideoPlayerComponent},
     {path: '', redirectTo: 'videos', pathMatch: 'full'},
 ];
 

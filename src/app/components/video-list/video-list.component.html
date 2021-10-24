@@ -6,6 +6,8 @@
     <div class="col-10">
       <h3>{{ video.title }}</h3>
       <p>{{ video.description }}</p>
+      <!-- Enviar parámetros de ruta, el parámetro se gestiona desde el componente de página -->
+      <a [routerLink]="['/player', video.id]">Ver video</a>
     </div>
   </div>
 </div>

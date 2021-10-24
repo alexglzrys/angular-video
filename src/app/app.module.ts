@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { routing } from './app-routing';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    VideoListComponent
+    VideoListComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,

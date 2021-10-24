@@ -4,3 +4,10 @@ header {
 header a {
   color: white;
 }
+.navbar-nav .active {
+  background-color: #ccc;
+  border-radius: .25rem;
+}
+.navbar-nav .active a {
+  color: brown;
+}

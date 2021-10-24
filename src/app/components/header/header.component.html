@@ -1,10 +1,21 @@
 <header class="mb-5">
-  <nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <i class="fab fa-youtube"></i>
-        Angular Video
-      </a>
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <i class="fab fa-youtube"></i>
+      Angular Video
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/videos']">Lista de videos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/player']">Reproductor</a>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
